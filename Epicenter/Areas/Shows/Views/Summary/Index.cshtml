@@ -1,0 +1,27 @@
+﻿@using Epicenter.Areas.Shows.Models
+@model LibraryViewModel
+
+@{
+    ViewBag.Title = "Shows";
+    ViewBag.IsSummary = true;
+}
+
+<div class="jumbotron" style="margin-left: 0;background-color: #68120f; color:antiquewhite">
+    <h1>My Library</h1>
+    @*<p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+        <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+</div>
+
+<div style="padding: 20px">
+    @foreach (var show in Model.Shows)
+    {
+        <div style="width: 124px; display: inline-block">
+            <div class="thumbnail" style="height: 195px; background-color: #68120f; color: antiquewhite; border: black">
+                <img style="width: 124px; height: 170px" src="/Content/Images/blacklist.jpg" alt="...">
+                <p style="text-align: center;">
+                    @show.Name
+                </p>
+            </div>
+        </div>
+    }
+</div>
