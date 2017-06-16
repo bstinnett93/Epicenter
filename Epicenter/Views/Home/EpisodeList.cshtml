@@ -1,0 +1,32 @@
+﻿@using Epicenter.Models
+@model IEnumerable<EpisodeViewModel>
+
+@{
+    ViewBag.Title = "Episodes";
+    ViewBag.ToDisplay = 1;
+}
+
+<div>
+    <div class="jumbotron" style="margin-left: 0;background-color: #68120f; color:antiquewhite">
+        <h1>My Library</h1>
+    </div>
+
+    <div style="padding: 20px">
+        @Model.FirstOrDefault().ShowName
+        <table class="table table-hover">
+            @foreach (var episode in Model)
+            {
+                <tr style="background-color: azure;">
+                    <td>s @episode.SeasonNumber e @episode.EpisodeNumber</td>
+                    <td>@episode.Description<br/>
+                        @episode.EpisodeRating
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>   
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/Scripts/foundation.js"></script>

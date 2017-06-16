@@ -1,0 +1,16 @@
+﻿@using Epicenter.Models
+@model IEnumerable < ShowViewModel >
+
+@foreach (var show in Model)
+{
+    <div style="width: 97px; display: inline-block;">
+        <div class="thumbnail" onclick="getEpisodeList(this);" id="@show.ShowId" style="height: 93px; background-color: #68120f; color: antiquewhite; border: black">
+            <img style="width: 97px; height: 69px" src="" alt="...">
+            <p style="text-align: center;">
+                @show.ShowId
+                @show.ShowName
+            </p>
+        </div>
+    </div>
+}
+

@@ -1,0 +1,22 @@
+﻿@using Epicenter.Models
+@model IEnumerable < EpisodeViewModel >
+
+@{
+    ViewBag.Title = "Favorites";
+}
+Favorite Episodes
+<br/>
+<table class="table table-hover">
+    @foreach (var episode in Model)
+    {
+        <tr style="background-color: azure; color: black">
+            <td>@episode.ShowName<br/>
+                s @episode.SeasonNumber e @episode.EpisodeNumber
+            </td>
+            <td>@episode.Description<br/>
+                @episode.EpisodeRating
+            </td>
+        </tr>
+    }
+</table>
+

@@ -16,8 +16,8 @@ namespace Epicenter
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            ).DataTokens.Add("area", "Shows");
+                defaults: new {controller = "Home", action = "Index", id = UrlParameter.Optional}
+            );
         }
     }
 }

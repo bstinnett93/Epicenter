@@ -1,24 +1,32 @@
-﻿<div id="sidebar" class="col-md-2">@RenderPage("~/Views/Shared/_ShowsSidebar.cshtml")</div>
-<div id="content" class="col-md-10"></div>
+﻿<div>
+    Recent Shows
+    <div id="recentShows"></div>
+</div>
+<div style="margin-top: 40vh; border-top: 6px solid #eef0ed;">
+    Favorite Shows
+    <div id="favoriteShows"></div>
+</div>
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="/Scripts/foundation.js"></script>
 <script>
     $(function () {
-        getContent("/Home/ShowCollection");
+        getRecentShows();
+        getFavoriteShows();
     });
 </script>
 
 <style>
-    #sidebar {
+    /*#sidebar {
         height: 100vh;
         background-color: #161616;
         color: antiquewhite;
         padding: 10px;
         text-align: center;
     }
+
     #content {
         height: 100vh;
-        background-color: #222222
-    }
+        background-color: #222222;
+    }*/
 </style>
